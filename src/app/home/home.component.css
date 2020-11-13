@@ -1,0 +1,232 @@
+.container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+.slide_img{
+    height: 800px !important;
+
+    
+}
+
+#cat_text{
+
+   padding-top:20px;
+}
+
+#cat_text{
+    text-align: center;
+
+    
+}
+
+.carousel-caption{
+
+    margin: 0 auto;
+  position: absolute;
+  max-width: 40%;
+  max-height: 60%;
+  padding:50px;
+ top:5%;
+ text-align:center;
+ font-weight: bold;
+ word-break: keep-all;
+ background-color: rgb(0,0,0,.5);
+}
+
+
+
+.slide_btn{
+    margin-top:5%;
+    max-width:50%;
+    padding:10px;
+    border:1px solid grey;
+    color:rgb(255, 255, 255);
+    border-radius: 25px;
+
+}
+
+.slide_btn:hover{
+    background-color: rgb(201, 200, 200);
+    
+}
+
+#category{
+    background-color: rgb(29,29,31);
+    color:white;
+}
+
+
+
+.cat_img:hover{
+    
+    /* max-width:50%;
+    padding:5px; */
+
+   opacity: .5;
+
+   
+ }
+
+.cat_img{
+   display:block;
+   max-width:100%;
+   max-height: 300px;
+   border:1px solid grey;
+   box-shadow: 5px 10px  10px 10px #2f2f2f
+  
+}
+
+
+
+#cat_parent{
+    
+    max-width:100%;
+    margin-top: 6%;
+   display:flex;
+   flex-direction: row;
+   margin-bottom:10%;
+
+   
+  
+  
+}
+
+.cat_title{
+    margin-top:5%;
+    margin-bottom:5%;
+    font-weight: bold;
+    text-align: center;
+  
+    
+ 
+}
+
+
+.space{
+
+    margin-top: 3%;
+}
+
+
+#product{
+    background-color:rgb(4,2,3);
+}
+
+
+.product_row{
+
+ 
+
+    /* display: flex;
+    justify-content: center ;
+    align-items: center; */
+}
+
+.product_content{
+  
+        width: 69%;
+        margin: 0 auto;
+   
+       
+/* 
+       display: flex;
+    justify-content: center ;
+    align-items: center; */
+
+
+    /* display:inline; */
+
+
+}
+
+
+.card{
+  
+    display:inline-block;
+    margin: 1% 1%;
+
+}
+
+
+.shop_text{
+
+    margin: 0 0  3% 0;
+    color:white;
+}
+
+.card-img-top{
+
+        width:100% !important;
+        background-color: rgba(70, 70, 70, 0.527);
+}
+
+
+.card-body{
+    background-color: rgb(29,29,31);
+    color:white;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    * {
+        font-size: small;
+        
+    }
+
+        .slide_img{
+           max-height:400px !important;
+       
+        }
+
+        
+        .carousel-caption{
+            max-width: 60%;
+            max-height: 100%;
+         word-wrap: break-word;
+          
+        }
+    
+        .cap_text{
+
+            font-size: 15px;
+            
+        }
+
+    .slide_btn{
+        width: 100%;
+        font-size: x-small;
+    }
+
+
+    #cat_parent{
+
+       
+    }
+
+    .product_content{
+     
+    }
+
+
+    .card{
+
+        display:block;
+        max-width:98%;
+        margin: 8% 0;
+    }
+
+    .card::hover{
+
+        opacity: 1;
+    }
+
+
+
+
+  }

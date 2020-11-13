@@ -1,0 +1,41 @@
+html body{
+    box-sizing: border-box;
+    height: 100%;
+     margin: 0%;
+    padding: 0%;
+    border: 0px;
+    background-color: black !important;
+    vertical-align: middle;
+    }
+    
+    .hea{
+    
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:10px;
+    }
+    .hea div p{
+    
+        display:inline;
+        
+    }
+    .contact{
+        margin: 0 10%;
+    }
+    
+    .navbar{
+        background-color: rgb(0,0,0) !important;
+    }
+    nav{
+        color:white
+    }
+    
+    header{
+        background-color: rgb(12, 12, 14);
+        color:white;
+        font-size:12px;
+    }
+    
+    
+    
