@@ -1,0 +1,54 @@
+<div id="main-parent" style="margin-top:3%; max-width:40%; padding:50px"  class="container">
+
+   <div style="margin-bottom: 1%" class="parent_one row">
+    
+     <div style="color:black"  class="col-md-6 col-auto"><h3>Shoping Cart</h3>   Items: <span>{{items.length}}</span> </div>
+     <div  class="col-md-6 col-auto"><button style="border:1px solid red; float:right;" class="btn btn-primary">Continue Shoping</button></div>
+    </div>
+
+
+<!-- ///////Products -->
+
+<div class="parent_one row" *ngFor="let item of items  ">
+ <div  class="  col-md-6 col-auto">
+     <div class='items'>
+        <img  [src]="item.img" alt="">
+           <div class="title"> 
+               
+                <h5  >{{item.name}}</h5>
+                <p>{{item.short_desc}}</p>
+            
+        </div>  
+    </div>
+
+       
+</div>
+ <div class="col-md-6 col-auto">
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
+           <p   class="items_right" >  <span class="price">{{item.price|currency}}</span > </p>
+           <input #qunity (click)="test($event)" class=" input " type="number" min=0>
+           <p class="items_right"><i style="display:inline-block; color:red" class="fa fa-trash-o" aria-hidden="true"></i></p>
+        </div>
+    </div>
+    
+</div>
+
+<hr>
+
+<!-- ///////Checkout -->
+
+
+<div class="row" style=" background-color:rgb(245, 245, 245); padding:20px;">
+
+<div  style="color:black; " class="col-md-12">
+    <div style=" display: flex; flex-direction: row; justify-content: space-between; ">
+         <h5 class="total" style="font-weight: normal;">Total: <span class="price">{{  total_price |currency}}</span></h5>
+        <button class="btn btn-success total ">Checkout</button>
+    </div>
+
+</div>
+
+</div>
+
+
+</div>

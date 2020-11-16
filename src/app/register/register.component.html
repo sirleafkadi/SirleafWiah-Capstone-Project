@@ -1,0 +1,54 @@
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <h3>Registration</h3>
+        </div>
+
+        <form  [formGroup]="formFer" class="form-content" novalidate>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name "  formControlName="username" />
+                       <div style="display:inline" class="form-control-feed-back"  *ngIf="formFer.get('username').touched && formFer.get('username').invalid">
+                            <p style="color:red; display:inline" *ngIf="formFer.get('username').errors.required">Name is Required</p>
+                            <p style="color:red; display:inline" *ngIf="formFer.get('username').errors.minlength">Invalid minlength</p> <div></div>
+                            <p style="color:red; display:inline" *ngIf="formFer.get('username').errors.maxlength">Invalid maxlength</p>
+
+                         </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email "  formControlName="email"/>
+                        <div style="display:inline" class="form-control-feed-back"  *ngIf="formFer.get('email').touched && formFer.get('email').invalid">
+                            <p style="color:red; display:inline" *ngIf="formFer.get('email').errors.required">Email is Required</p><div></div>
+                            <p style="color:red; display:inline" *ngIf="formFer.get('email').errors.minlength">Invalid minlength</p> <div></div>
+                            <p style="color:red; display:inline" *ngIf="formFer.get('email').errors.maxlength">Invalid maxlength</p> <div></div>
+                            <p style="color:red; display:inline" *ngIf="formFer.get('email').errors.pattern">Invalid patterns</p>
+
+
+                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Password "  formControlName="password"/>
+                        <div style="display:inline" class="form-control-feed-back"  *ngIf="formFer.get('password').touched && formFer.get('password').invalid">
+                            <p style="color:red; display:inline" *ngIf="formFer.get('password').errors.required">Password is Required</p>
+                            <p style="color:red; display:inline" *ngIf="formFer.get('password').errors.minlength">Invalid minlength</p> <div></div>
+                            <p style="color:red; display:inline" *ngIf="formFer.get('password').errors.maxlength">Invalid maxlength</p>
+                    
+                         </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Confirm Password "  formControlName="comfirm"/>
+                        <div style="display:inline" class="form-control-feed-back"  *ngIf="formFer.get('comfirm').touched && formFer.get('comfirm').invalid">
+                            <p style="color:red; display:inline" *ngIf="formFer.get('comfirm').errors.required">Comfirmation is Required</p>
+                    
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn  btn-success"  [disabled]="formFer.invalid" >Submit</button>
+        </form>
+    </div>
+</div>

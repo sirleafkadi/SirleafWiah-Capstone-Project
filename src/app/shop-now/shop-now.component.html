@@ -1,0 +1,69 @@
+<div style="margin-top:5%" class="container" >
+
+  <div class="row">
+
+    <div class="col-lg-3">
+
+      <h1 class="my-4" style="color:white">sbElectronics</h1>
+      <div class="list-group">
+        <a  class="list-group-item"   (click)="get_all()" >All Products</a>
+        <a class="list-group-item" (click)="get_type(true)">Smart Phones</a>
+        <a class="list-group-item"  (click)="get_type(false)">Laptops</a>
+     
+        <select #id style="margin-bottom: 5%; color:blue" class="brand" (change)="get_bybrand(id.value)">
+          <option>Select Brand</option>
+         <option [value]="category._id" *ngFor="let category of Category">{{category.name}}</option>
+         
+        </select>
+        
+      </div>
+
+    </div>
+    <!-- /.col-lg-3 -->
+
+    <div class="col-lg-9">
+
+  
+
+      <div class="row">
+
+         <!-- ///////Loading All Products -->
+      <div  class="col-lg-4 col-md-6 mb-4" *ngFor="let product of Product">
+          <div style="border-radius: 5px; padding-top:10px" class="card h-100">
+            <a href="#"><img  class="card-img-top" [src]="product.img" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a [routerLink]="['/view', product._id]"> {{product.name}}</a>
+              </h4>
+              <h5>$<span>{{product.price}}</span></h5>
+              <p class="card-text">{{product.short_desc}}</p>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary">ADD TO CARD</button>
+            </div>
+          </div>
+        </div>
+
+
+
+      
+
+
+
+        
+  
+
+      
+      <!-- /.row -->
+
+    </div>
+    <!-- /.col-lg-9 -->
+
+  </div>
+  <!-- /.row -->
+
+</div>
+
+
+
+</div>

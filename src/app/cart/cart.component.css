@@ -1,0 +1,86 @@
+#main-parent{
+	
+	border:1px solid rgb(217,237,247);
+	color:white;
+	max-width:90%;
+	
+	background-color: rgb(255,255,255);
+
+}
+
+h4{
+	font-weight: bold;
+}
+
+.items{
+
+	display:flex;
+	flex-direction: row;
+
+}
+
+
+h5{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.price{
+
+	font-weight: bold;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.title{
+	margin-top: 5%;
+
+}
+
+.parent_one{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color:black;
+
+
+}
+
+h3, h1{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bold;
+}
+
+
+p{
+	word-wrap: break-word;
+	
+}
+
+div img{
+
+	display: inline;
+	max-width: 40%;
+	max-height: 5%;
+	margin:5%;
+
+}
+.items_right{
+	
+}
+
+input{
+	max-width: 30%;
+	max-height: 30px;
+	margin-top:9%;
+	margin-left:2%;
+	
+
+}
+
+.total{
+ 
+	display: inline-block;
+	margin: 0 13px;
+
+
+}

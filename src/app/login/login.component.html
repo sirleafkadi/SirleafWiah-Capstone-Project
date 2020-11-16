@@ -1,0 +1,45 @@
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="formFer" novalidate>
+
+
+      <div style="display:inline" class="form-control-feed-back"  *ngIf="formFer.get('username').touched && formFer.get('username').invalid">
+        <p style="color:red; display:inline" *ngIf="formFer.get('username').errors.required">Name is Required</p>
+
+     </div>
+
+      
+         <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" formControlName="username">
+
+         
+         <br>
+
+         <div style="display:inline" class="form-control-feed-back"  *ngIf="formFer.get('password').touched && formFer.get('password').invalid">
+          <p style="color:red; display:inline" *ngIf="formFer.get('password').errors.required">Password is Required</p>
+
+       </div>
+
+
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" formControlName="password" >
+      <button type="button" class="fadeIn fourth btn btn-success" [disabled]="formFer.invalid" >login</button>
+
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover"  routerLink="/register">Register</a>
+      |<div style="display:inline; margin-left:10px"></div><a routerLink="/home" class="underlineHover" >Home</a>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div style="background-color: white;" class="container">
+
+
+<div  id="parent" class="row" *ngIf="product!=null">
+
+    <div style="padding:5px" class="pa col-md-6 col-12" id="img_el" >
+        <!-- //////Image -->
+        <img  style="display: block;  margin-left: auto; margin-right: auto; margin-top:8%; border-radius: 25px; max-width: 90%; max-height: auto"  class="pr" [src]="product.img" alt="Product">
+    </div>
+
+
+    <div style="padding:15px" class="col-md-6 col-12 content" id="img_el">
+        <!-- //////Image -->
+        <div>
+
+            <ul>
+                <li><h4 style=""  class="all">{{product.name}}</h4> </li>
+                <li>Year: <span>{{product.year}}</span> </li>
+                <li>Model: <span>{{product.model}}</span> </li>
+                <li>Price: <span>{{product.price | currency}}</span> </li>
+                <li>CPU: <span>{{product.cpu}}</span> </li>
+                <li>Ram: <span>{{product.memory}}</span>gb</li>
+                <li>Display: <span>{{product.display}}</span></li>
+            </ul>
+            <br>
+            <div>
+
+                <ol>
+
+                 <li><h4 style=""  class="all">Description</h4> </li>  
+
+                 <li class="desc"><p id="desc">{{product.desc}}</p>
+                 </li>
+                    <br>
+                      <li> 
+                          
+                        <p [ngClass]="color">  {{msg}}</p> 
+                     <input placeholder="Quantity"  type="number">  <p></p> <button  (click)="addToCart(product)"  class="btn btn-primary" type="button">Buy Now</button>
+                     </li> 
+                </ol>
+
+            </div>
+
+        </div>
+
+
+    </div>
+        
+
+
+
+
+   
+
+
+</div>
+
+
+
+
+
+</div>

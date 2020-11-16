@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import * as $ from 'jquery';
+import { Component, Input } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,6 @@ import * as $ from 'jquery';
 })
 export class AppComponent {
   title = 'sirleaf-capstone-project';
+  @Input() total_items;
+
 }

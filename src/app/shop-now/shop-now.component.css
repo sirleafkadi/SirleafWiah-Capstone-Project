@@ -1,0 +1,14 @@
+body {
+    padding-top: 56px;
+  }
+
+.card{
+
+    max-width:100%;
+    max-height: inherit
+}
+
+
+a{
+  cursor: pointer;
+}
