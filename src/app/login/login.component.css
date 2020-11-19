@@ -249,7 +249,11 @@ html {
     width: 100%;
   }
   
-  
+  #formContent{
+
+    margin-top: 5% !important;
+
+  }
   
   /* OTHERS */
   
@@ -261,3 +265,36 @@ html {
     width:60%;
   }
   
+
+  @media screen and (max-width: 700px) {
+    * {
+       font-size: small;
+       font-size: 10px;
+    }
+  
+    form{
+      margin-top:6% !important;
+    }
+
+    #formContent{
+
+      margin-top: 23% !important;
+
+    }
+
+    .con{
+  
+      max-width: 95% !important;
+      margin-top:15% !important;
+    }
+  
+    .btn{
+      
+     
+      font-size: 9px !important;
+    }
+  
+  
+  
+  
+    }

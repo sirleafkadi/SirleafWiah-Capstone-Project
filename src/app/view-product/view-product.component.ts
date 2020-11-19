@@ -16,13 +16,14 @@ export class ViewProductComponent implements OnInit {
   add:boolean;
   msg="";
   color;
-  constructor(private activated_route: ActivatedRoute, private load_service: LoadService, private cart_service: CartServiceService ) { }
+  islogin:boolean;
+  constructor(private activated_route: ActivatedRoute, private load_service: LoadService, private cart_service: CartServiceService ) { this.islogin=false; }
 
   ngOnInit(): void {
-
+    this.islogin=this.load_service.islogin;
    this.id= this.activated_route.snapshot.paramMap.get("id");
    this.load_service.loadproduct_byId(this.id).subscribe( (data)=>{this.product=data}, (err)=>{console.log("Error getting data from Database")} );
-
+  
   }
 
 
@@ -42,6 +43,7 @@ export class ViewProductComponent implements OnInit {
   }
 
 
+  
 
 
 

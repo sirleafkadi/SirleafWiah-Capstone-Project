@@ -84,3 +84,31 @@ input{
 
 
 }
+
+
+
+@media screen and (max-width: 850px) {
+	* {
+		 font-size: small;
+		 font-size: 10px;
+	}
+
+
+	.con{
+
+		max-width: 95% !important;
+		margin-top:15% !important;
+	}
+
+	.btn{
+
+		font-size: 3px;
+	}
+
+	img{
+
+		max-width: 2%;
+	}
+
+
+  }

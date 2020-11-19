@@ -47,6 +47,7 @@ p{
 @media only screen and (max-width: 600px) {
     * {
         font-size: small;
+        
  
         
     }
@@ -55,15 +56,30 @@ p{
         margin-top:5%;
     }
 
+    li{
+     font-size:8PX;
+    }
 
     .pa{
 
         border-radius: 5;
     }
     button{
-        font-size: 9px;
+        font-size: 5px;
     }
 
+    .all{
+        font-size: 2px;
+    }
+    
+    span{
+        font-size: 7px;
+    }
+   
+    img{
+
+        max-width: 70% !important;
+    }
 
     #parent{
         margin-top:14%;
@@ -76,7 +92,7 @@ p{
         margin-top:5%;
     }
     #desc{
-        font-size: 100%;
+        font-size: 95%;
     }
 
       

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import{LoadService} from '../load.service';
 import{Product} from '../product_model';
 import { Category } from '../category.model';
+import { CartServiceService} from '../cart-service.service';
+import {ActivatedRoute} from '@angular/router';
+
 
 
 @Component({
@@ -15,15 +18,28 @@ export class ShopNowComponent implements OnInit {
   Product:Array<Product>;
   Reserved_Product:Array<Product>;
   Category:Array<Product>;
+  islogin:boolean;
+  add:boolean;
+  msg="";
+  color;
+  cur_product:Number;
+  start:any;
 
 
-  constructor(private load_service:LoadService) {}
+  constructor(private load_service:LoadService, private cart_service:CartServiceService, private activated_route:ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.load_service.loadproduct_all().subscribe( (data)=>{this.Product=data; this.Reserved_Product=this.Product;}, (err)=>{console.log("Error getting data from Database")} );
-    
-    this.load_service.loadproduct_category().subscribe( (data)=>{this.Category=data}, (err)=>{console.log("Error getting Category from Database")});
 
+      this.start=this.activated_route.snapshot.paramMap.get("type");
+
+      // if(this.start!=null || this.start!=""){
+      //   this.get_type(this.start);
+      // }
+
+    
+    this.load_service.loadproduct_all().subscribe( (data)=>{this.Product=data;     Object.entries(this.Product); this.Reserved_Product=this.Product;}, (err)=>{console.log("Error getting data from Database")} );
+    this.load_service.loadproduct_category().subscribe( (data)=>{this.Category=data}, (err)=>{console.log("Error getting Category from Database")});
+    this.islogin=this.load_service.islogin;
   }
 
 
@@ -47,12 +63,21 @@ get_bybrand(id:number){
         }
     })
 
-    
+  }
 
 
-}
 
-
+  buy(product:Number){
+    if(this.cart_service.addToCart(product)){
+      this.msg="Successfully added"
+      this.color="added"
+      this.cur_product=product;
+ }
+ else{
+   this.msg="already in cart"
+   this.color="is_there";
+ }
+  }
 
 
 

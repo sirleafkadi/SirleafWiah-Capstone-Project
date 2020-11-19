@@ -11,6 +11,7 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -22,7 +23,8 @@ import { RegisterComponent } from './register/register.component';
     ViewProductComponent,
     CartComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

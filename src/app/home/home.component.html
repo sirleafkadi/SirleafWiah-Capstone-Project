@@ -1,4 +1,12 @@
 
+
+<navbar>
+  
+</navbar>
+
+
+
+<div class="container">
 <section>
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -16,7 +24,7 @@
                   <h3 class='cap_text'>Free Shippping | Fast Customer Support </h3>
                   <br>
                   <h5 class='cap_text'>Quality Over Quantity</h5>
-                <button type="button" class=" slide_btn btn">Shop Now</button>
+                <button type="button" routerLink="/shop-now" class=" slide_btn btn">Shop Now</button>
               </div>
             </div>
             <div class="carousel-item">
@@ -37,6 +45,7 @@
         </div>
   
       </section> 
+</div>
   
       <div class="space"></div>
 
@@ -52,7 +61,7 @@
                <div    class="col-md-4 col-xs-12 cat_content ">
                   <div >
                   <h4 class="cat_title  ">Smart Phones</h4>
-                  <img   class='cat_img' src="../assets/img/phone_cat.png" alt="">
+                    <a  [routerLink]="['shop-now', true]"><img   class='cat_img' src="../assets/img/phone_cat.png" alt=""></a> 
                 </div>
                 </div>
                 <div class=" col-md-4 col-xs-12 cat_content">
@@ -66,7 +75,7 @@
                <div class=" col-md-4 col-xs-12 cat_content">
                  <div>
                  <h4 class="cat_title">Computers</h4>
-                 <img   class='cat_img' src="../assets/img/laptop.png" alt="">
+                <a [routerLink]="['shop-now', false]"> <img   class='cat_img' src="../assets/img/laptop.png" alt=""></a> 
                 </div>
               </div>
         

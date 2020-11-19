@@ -9,16 +9,20 @@
     </div>
 
     <!-- Login Form -->
-    <form [formGroup]="formFer" novalidate>
+    <form [formGroup]="formFer"  (ngSubmit)="login()" novalidate>
 
 
-      <div style="display:inline" class="form-control-feed-back"  *ngIf="formFer.get('username').touched && formFer.get('username').invalid">
-        <p style="color:red; display:inline" *ngIf="formFer.get('username').errors.required">Name is Required</p>
+      <p style="color:green; text-align:center" *ngIf="success"><br> Success,  you're being redirected........... </p>
+      <p style="color:red; tex-align:center" *ngIf="error">Wrong login </p>
+
+
+      <div style="display:inline" class="form-control-feed-back"  *ngIf="formFer.get('email').touched && formFer.get('email').invalid">
+        <p style="color:red; display:inline" *ngIf="formFer.get('email').errors.required">Name is Required</p>
 
      </div>
 
       
-         <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" formControlName="username">
+         <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" formControlName="email">
 
          
          <br>
@@ -29,15 +33,16 @@
        </div>
 
 
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" formControlName="password" >
-      <button type="button" class="fadeIn fourth btn btn-success" [disabled]="formFer.invalid" >login</button>
+      <input type="text" id="text" class="fadeIn third" name="login" placeholder="password" formControlName="password" >
+      <input type="submit" style="background-color: rgb(115,197,134)" class="fadeIn fourth btn btn-success" [disabled]="formFer.invalid"  value="Login">
 
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
       <a class="underlineHover"  routerLink="/register">Register</a>
-      |<div style="display:inline; margin-left:10px"></div><a routerLink="/home" class="underlineHover" >Home</a>
+      |<div style="display:inline; margin-left:10px; "></div><a routerLink="/home" class="underlineHover" >Home</a>
+      |<div style="display:inline; margin-left:10px; "></div><a routerLink="/shop-now" class="underlineHover" >Shop now</a>
 
     </div>
 

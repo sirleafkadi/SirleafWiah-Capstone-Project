@@ -1,10 +1,13 @@
+<navbar>
+  
+</navbar>
 <div style="margin-top:5%" class="container" >
 
   <div class="row">
 
     <div class="col-lg-3">
 
-      <h1 class="my-4" style="color:white">sbElectronics</h1>
+      <h1 class="my-4" style="color:white">Shop</h1>
       <div class="list-group">
         <a  class="list-group-item"   (click)="get_all()" >All Products</a>
         <a class="list-group-item" (click)="get_type(true)">Smart Phones</a>
@@ -39,13 +42,16 @@
               <p class="card-text">{{product.short_desc}}</p>
             </div>
             <div class="card-footer">
-              <button type="button" class="btn btn-primary">ADD TO CARD</button>
+              <!-- <p [ngClass]="color" *ngIf="islogin && cur_product==product._id">  {{msg}}</p>  -->
+              <button type="button" (click)="buy(product)" class="btn btn-primary" *ngIf="islogin">Buy now</button>
+              <button type="button" routerLink="/login" class="btn btn-secondary" *ngIf="!islogin">Login now</button>
+
             </div>
           </div>
         </div>
 
 
-
+        <hr>
       
 
 

@@ -1,12 +1,14 @@
 import { JsonPipe } from '@angular/common';
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CartServiceService {
 
   items=[];
+  public total_price;
 
   constructor() {  }
 
@@ -47,7 +49,23 @@ export class CartServiceService {
   }
 
   getItems(){ 
+    let cur_total_price=0;
+    this.items.forEach(function(item){
+        cur_total_price+= (item.quantity*item.price);
+    });
+      this.total_price=cur_total_price;
       return this.items;
+  }
+
+
+  update_cart(update_it:any){
+    this.items=update_it;
+    let cur_total_price=0;
+    this.items.forEach(function(item){
+        cur_total_price+= (item.quantity*item.price);
+    });
+      this.total_price=cur_total_price;
+      return this.total_price;
   }
 
 

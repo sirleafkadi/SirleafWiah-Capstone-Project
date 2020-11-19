@@ -1,3 +1,4 @@
+
 .container{
         display: flex;
         justify-content: center;
@@ -5,9 +6,12 @@
     }
 
 
+section{
 
+
+}
 .slide_img{
-    height: 800px !important;
+    height: 600px !important;
 
     
 }
@@ -40,9 +44,9 @@ a{
     margin: 0 auto;
   position: absolute;
   max-width: 40%;
-  max-height: 60%;
+  max-height: 70%;
   padding:50px;
- top:5%;
+ top:10%;
  text-align:center;
  font-weight: bold;
  word-break: keep-all;
@@ -186,20 +190,29 @@ a{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     * {
         font-size: small;
+       
+        
+        
         
     }
 
+
         .slide_img{
-           max-height:400px !important;
+           max-height:300px !important;
        
         }
 
-        
+        .slide_btn{
+            max-width:100%;
+          
+            font-size: 2px;;
+        }
+
         .carousel-caption{
-            max-width: 60%;
+            max-width: 100%;
             max-height: 100%;
          word-wrap: break-word;
           
@@ -207,7 +220,7 @@ a{
     
         .cap_text{
 
-            font-size: 15px;
+            font-size: 10px;
             
         }
 

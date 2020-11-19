@@ -1,16 +1,24 @@
 import { Injectable } from '@angular/core';
-import{HttpClient} from '@angular/common/http';
+import{HttpClient, HttpHeaders} from '@angular/common/http';
 import { Product } from './product_model';
 import { Category } from './category.model';
 import { Observable } from 'rxjs';
+import{Customer} from './customer_model';
+import {Confirm} from './confirm_model';
 
+
+const httpOptions = { 
+  headers: new HttpHeaders ({ 'Content-Type': 'application/json'}) 
+
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoadService {
-
-  constructor(private http_client: HttpClient) { }
+  public islogin:boolean;
+  public cur_user:String;
+  constructor(private http_client: HttpClient) {  this.islogin=false;  this.cur_user="";  }
 
     ///////Serving Products
     loadproduct_category(): Observable<Category[]>{
@@ -31,11 +39,17 @@ loadproduct_byId(id:any): Observable<Product[]>{
 }
 
 
+register(customer:any): Observable<any>{
+       return this.http_client.post<any>("http://localhost:9090/customer/register", customer, httpOptions);
+}
 
+login(customer:any): Observable<any>{
+  return this.http_client.post<any>("http://localhost:9090/customer/login", customer, httpOptions);
+}
 
-
-
-
+// info(customer:any): Observable<Customer[]>{
+//   return this.http_client.get<Customer[]>("http://localhost:9090/customer/info/"+customer);
+// }
 
 
 }

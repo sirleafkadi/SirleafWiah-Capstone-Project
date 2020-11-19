@@ -38,3 +38,27 @@ p, h1, h3, h5, h4{
     text-align:center;
     padding-top:15px;
 }
+
+.form{
+    margin-top: 11% !important;
+ 
+}
+
+@media only screen and (max-width: 800px) {
+    * {
+        font-size: small !important;
+    }
+
+    .btn{
+        font-size: 5% !important;
+        /* max-height: 5px !important; */
+    }
+  
+
+    .form{
+        margin-top: 24% !important;
+     
+    }
+
+  
+}

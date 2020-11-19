@@ -1,0 +1,46 @@
+.hea{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:10px;
+}
+.hea div p{
+
+    display:inline;
+    
+}
+.contact{
+    margin: 0 10%;
+}
+
+.navbar{
+    background-color: rgb(0,0,0) !important;
+}
+nav{
+    color:white
+}
+
+header{
+    background-color: rgb(12, 12, 14);
+    color:white;
+    font-size:12px;
+}
+
+
+a{
+    text-decoration: none;
+    list-style: none;
+    color:white;
+}
+
+@media only screen and (max-width: 600px) {
+    * {
+        font-size: small !important;
+    }
+
+    .btn-success{
+        font-size: 5% !important;
+        /* max-height: 5px !important; */
+    }
+}

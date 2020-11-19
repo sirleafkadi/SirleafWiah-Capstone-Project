@@ -1,4 +1,8 @@
-<div id="main-parent" style="margin-top:3%; max-width:40%; padding:50px"  class="container">
+
+<navbar>
+  
+</navbar>
+<div id="main-parent" style="margin-top:3%; max-width:40%; padding:50px"  class="container con">
 
    <div style="margin-bottom: 1%" class="parent_one row">
     
@@ -23,11 +27,11 @@
 
        
 </div>
- <div class="col-md-6 col-auto">
-        <div style="display: flex; flex-direction: row; justify-content: space-between;">
-           <p   class="items_right" >  <span class="price">{{item.price|currency}}</span > </p>
-           <input #qunity (click)="test($event)" class=" input " type="number" min=0>
-           <p class="items_right"><i style="display:inline-block; color:red" class="fa fa-trash-o" aria-hidden="true"></i></p>
+ <div class="col-md-6 col-auto" *ngIf="item.quantity>=1">
+        <div style="display: flex; flex-direction: row; justify-content: space-between;" >
+           <p   class="items_right">  <span class="price">{{item.price|currency}}</span ><span></span>  <span style="font-weight: bold;"> | {{item.quantity}} </span><span style="font-weight: bold;">qt</span></p>
+           <input #quntity_input (change)="alter_quantity(quntity_input, item._id)"  class=" input " type="number" min=0>
+           <p class="items_right" (click)="remove(item._id)"><i style="display:inline-block; color:red" class="fa fa-trash-o" aria-hidden="true"></i></p>
         </div>
     </div>
     
