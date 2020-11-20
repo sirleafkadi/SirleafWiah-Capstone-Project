@@ -30,7 +30,7 @@
  <div class="col-md-6 col-auto" *ngIf="item.quantity>=1">
         <div style="display: flex; flex-direction: row; justify-content: space-between;" >
            <p   class="items_right">  <span class="price">{{item.price|currency}}</span ><span></span>  <span style="font-weight: bold;"> | {{item.quantity}} </span><span style="font-weight: bold;">qt</span></p>
-           <input #quntity_input (change)="alter_quantity(quntity_input, item._id)"  class=" input " type="number" min=0>
+           <input #quntity_input (change)="alter_quantity(quntity_input, item._id)"  class=" input " type="number" min=1>
            <p class="items_right" (click)="remove(item._id)"><i style="display:inline-block; color:red" class="fa fa-trash-o" aria-hidden="true"></i></p>
         </div>
     </div>

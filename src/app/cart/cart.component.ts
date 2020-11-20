@@ -16,10 +16,7 @@ export class CartComponent implements OnInit {
   total_price;
   islogin:boolean;
   
-
-
-
-  constructor(private cart_service: CartServiceService, private router:Router, private load_service:LoadService) { this.islogin=false; }
+constructor(private cart_service: CartServiceService, private router:Router, private load_service:LoadService) { this.islogin=false; }
 
   ngOnInit(): void {
 
@@ -33,31 +30,15 @@ export class CartComponent implements OnInit {
      }
 
   alter_quantity(quantity:any, id:Number){
-          console.log('Raw Quanitity'+quantity.value);
-          let cur_total_price=this.cart_service.total_price;
-    this.items.forEach(function(product){
-          if(product._id==id){
-              product.quantity=quantity.value;
-              console.log("current product quantity "+ product.quantity);
-              // cur_total_price += (product.price*product.quantity)-product.price;
-
-              // console.log("quantity:"+quantity.value+'\n'+'Product_id'+id);
-              // console.log('Updated product quantity'+ product.quantity);
-              
-          }
-    });
-  
-    // this.cart_service.total_price=cur_total_price;
-    this.cart_service.items=this.items;
-    // this.total_price=this.cart_service.total_price;
+      let quan = quantity.value;
+      this.items=this.cart_service.alter_quantity(quan, id);
+      this.total_price=this.cart_service.total_price; 
   }
-
 
 
   remove(id:number){
 
-     
-    if(confirm('Remove item?')){ 
+      if(confirm('Remove item?')){ 
       for(var i =0; i<this.items.length; i++){
         if(this.items[i]._id==id){
            this.items.splice(i, 1);
@@ -66,12 +47,6 @@ export class CartComponent implements OnInit {
 
         this.total_price=this.cart_service.update_cart(this.items);
      }
-
-
-
-  
-
-
 
 }
 
