@@ -39,7 +39,6 @@
                           
                       <button type="button" routerLink="/login" class="btn btn-secondary" *ngIf="!islogin">Login now</button> 
                         <p [ngClass]="color" *ngIf="islogin">  {{msg}}</p> 
-                        <input placeholder="Quantity"  type="number"  *ngIf="islogin">  <p></p>
                          <button  (click)="addToCart(product)"  class="btn btn-primary" type="button"  *ngIf="islogin">Buy Now</button>
                      </li> 
                 </ol>
