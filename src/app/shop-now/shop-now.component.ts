@@ -72,6 +72,7 @@ get_bybrand(id:number){
       this.msg="Successfully added"
       this.color="added"
       this.cur_product=product;
+    
  }
  else{
    this.msg="already in cart"

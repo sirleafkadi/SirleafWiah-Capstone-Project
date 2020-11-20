@@ -42,7 +42,7 @@
               <p class="card-text">{{product.short_desc}}</p>
             </div>
             <div class="card-footer">
-              <!-- <p [ngClass]="color" *ngIf="islogin && cur_product==product._id">  {{msg}}</p>  -->
+              <p [ngClass]="color"   *ngIf="islogin && cur_product==product._id">  {{msg}}</p> 
               <button type="button" (click)="buy(product)" class="btn btn-primary" *ngIf="islogin">Buy now</button>
               <button type="button" routerLink="/login" class="btn btn-secondary" *ngIf="!islogin">Login now</button>
 

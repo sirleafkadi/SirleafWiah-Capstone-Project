@@ -18,6 +18,7 @@ const routes: Routes = [
   {path:'view/:id', component:ViewProductComponent},
   {path:'checkout', component:CheckoutComponent},
   {path:'shop-now', component:ShopNowComponent},
+  {path:'shop-now/:select', component:ShopNowComponent},
   {path:'**', component:LoginComponent}
 ];
 
